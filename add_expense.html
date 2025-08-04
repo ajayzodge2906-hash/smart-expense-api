@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Add Expense{% endblock %}
+{% block content %}
+<div class="card fade-in">
+  <div class="card-header">
+    <h5 class="card-title"><i class="fas fa-plus me-2"></i>Add Expense</h5>
+  </div>
+  <div class="card-body">
+    <form method="POST">
+      <div class="mb-3">
+        <label class="form-label">Date</label>
+        <input type="date" name="date" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category" class="form-select" required>
+          <option>Food</option>
+          <option>Transport</option>
+          <option>Utilities</option>
+          <option>Entertainment</option>
+          <option>Health</option>
+          <option>Shopping</option>
+          <option>Rent</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Amount (₹)</label>
+        <input type="number" name="amount" class="form-control" step="0.01" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Add Expense</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

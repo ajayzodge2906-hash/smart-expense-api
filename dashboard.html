@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card stats-card fade-in">
+      <div class="card-body">
+        <h4>Total Expenses</h4>
+        <p class="display-6">₹{{ total }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
